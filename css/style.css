@@ -231,10 +231,93 @@ a:hover {
     color: var(--color-text-primary);
 }
 
+.objetivos h1{
+    font-size: var(--font-size-title);
+}
+
 .obj-container{
     display: flex; 
     flex-direction: column;
     flex-wrap: wrap;
     margin-top: var(--padding-sm);
     gap: 40px;
+}
+
+.card-obj{
+    display: flex;
+    align-items: center;
+    width: 600px;
+    min-height: 100px;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background-color: var(--bg-primary);
+    border: 1px solid var(--color-blue);
+    border-radius: var(--spacing-lg);
+    transition: .5s;
+}
+
+.card-obj:hover{
+    scale: 1.1;
+}
+
+.card-obj-content p{
+    font-family: Inter-light;
+}
+
+
+.publicos{
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: var(--padding-sm);
+    gap: var(--spacing-sm);
+    background-color: var(--bg-primary);
+    font-family: Space-light;
+    color: var(--color-text-primary);
+}
+
+.publicos h1{
+    font-size: var(--font-size-title);
+}
+
+.publi-container{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: var(--padding-sm);
+    gap: 40px;
+    
+}
+
+.card-publi{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    border: 1px solid var(--color-blue);
+    background-color: var(--bg-secondary);
+    gap: var(--spacing-sm);
+    text-wrap: balance;
+    height: 450px;
+    border-radius: var(--spacing-md);
+    transition: .5s;
+}
+
+.card-publi:hover{
+    scale: 1.1;
+}
+
+
+.card-publi p{
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-text);
+    font-family: Inter-light;
+}
+.card-publi img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
 }
