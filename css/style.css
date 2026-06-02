@@ -115,7 +115,7 @@ a:hover {
     background-color: transparent;
 }
 
-.problema{
+.problemas{
     min-height: 100dvh;
     display: flex;
     align-items: center;
@@ -128,7 +128,7 @@ a:hover {
     
 }
 
-.problema-content{
+.problemas-content{
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -136,17 +136,17 @@ a:hover {
     gap: var(--spacing-lg);
 }
 
-.problema-content h2{
+.problemas-content h2{
     font-size: var(--font-size-subtitle);
     font-family: Space-light;
 }
 
-.problema-content h1{
+.problemas-content h1{
     font-family: Space-light;
     font-size: var(--font-size-title);
 }
 
-.problema-content p{
+.problemas-content p{
     text-align: justify;
     letter-spacing: 1.cm;
     font-size: var(--font-size-text);
@@ -154,7 +154,7 @@ a:hover {
     font-family: Inter-light;
 }
 
-.problema-image{
+.problemas-image{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,7 +162,7 @@ a:hover {
     margin-left: var(--padding-md);
 }
 
-.problema-image img{
+.problemas-image img{
     width: 100%;
 }
 
@@ -320,4 +320,19 @@ a:hover {
 .card-publi img{
     width: 100%;
     border-radius: 20px 20px 0 0;
+}
+
+.beneficio{
+    min-height: 100dvh;
+    background-color: var(--bg-secondary);
+}
+
+.aplicacoes{
+    min-height: 100dvh;
+    background-color: var(--bg-primary);
+}
+
+.perguntas{
+    min-height: 100dvh;
+    background-color: var(--bg-secondary);
 }
