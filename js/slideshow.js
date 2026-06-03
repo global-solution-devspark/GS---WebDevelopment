@@ -8,7 +8,7 @@ const hero = document.querySelector(".hero");
 
 let indice = 0;
 
-// adiciona transição suave
+
 hero.style.transition = "opacity 0.8s ease-in-out";
 
 function trocarImagem() {
