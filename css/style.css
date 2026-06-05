@@ -485,3 +485,54 @@ footer{
     font-weight: bold;
 }
 
+.contato{
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    color:var(--color-text-primary);
+    font-family: Space-light;
+}
+
+.contato h1{
+    font-size: var(--font-size-title);
+}
+
+#contactForm{
+    display:flex;
+    flex-direction:column;
+    width:500px;
+    max-width:90%;
+    gap:15px;
+}
+
+#contactForm input,
+#contactForm textarea{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+#contactForm textarea{
+    resize:none;
+    height:150px;
+}
+
+#contactForm button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:var(--color-blue);
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+#contactForm button:hover{
+    opacity:.8;
+}
