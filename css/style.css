@@ -54,16 +54,32 @@ a {
 a:hover {
     color: var(--color-blue);
 }
+
 .hero {
+    position: relative;
+    overflow: hidden;
     height: 100vh;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, .8),rgba(0, 0, 0, .4)),
-    url(../images/imagem-satelite.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
+    background-color: #000;
     color: var(--color-text-secondary);
     padding-inline: var(--spacing-md);
     text-align: center;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+    z-index: 0;
+}
+
+.header-hero,
+.cta {
+    position: relative;
+    z-index: 1;
 }
 
 .header-hero {

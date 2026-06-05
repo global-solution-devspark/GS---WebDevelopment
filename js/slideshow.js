@@ -4,29 +4,44 @@ const imagens = [
     "./images/banner3.png"
 ];
 
-const hero = document.querySelector(".hero");
+const bg = document.querySelector(".hero-bg");
 
 let indice = 0;
 
-// adiciona transição suave
-hero.style.transition = "opacity 0.8s ease-in-out";
-
 function trocarImagem() {
-    hero.style.opacity = "0.7";
+
+    // Fade para preto
+    bg.style.opacity = "0";
 
     setTimeout(() => {
-        hero.style.backgroundImage =
-            `linear-gradient(to top,
-            rgba(0,0,0,.8),
-            rgba(0,0,0,.4)),
+
+        // Troca a imagem quando já está escura
+        bg.style.backgroundImage =
+            `linear-gradient(
+                to top,
+                rgba(0,0,0,.8),
+                rgba(0,0,0,.4)
+            ),
             url('${imagens[indice]}')`;
 
-        hero.style.opacity = "1";
+        // Fade aparecendo
+        bg.style.opacity = "1";
 
         indice = (indice + 1) % imagens.length;
-    }, 400);
+
+    }, 1500);
 }
 
-trocarImagem();
+// Primeira imagem
+bg.style.backgroundImage =
+    `linear-gradient(
+        to top,
+        rgba(0,0,0,.8),
+        rgba(0,0,0,.4)
+    ),
+    url('${imagens[0]}')`;
 
+indice = 1;
+
+// Troca a cada 5 segundos
 setInterval(trocarImagem, 5000);
