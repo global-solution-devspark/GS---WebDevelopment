@@ -54,16 +54,32 @@ a {
 a:hover {
     color: var(--color-blue);
 }
+
 .hero {
+    position: relative;
+    overflow: hidden;
     height: 100vh;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, .8),rgba(0, 0, 0, .4)),
-    url(../images/imagem-satelite.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
+    background-color: #000;
     color: var(--color-text-secondary);
     padding-inline: var(--spacing-md);
     text-align: center;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+    z-index: 0;
+}
+
+.header-hero,
+.cta {
+    position: relative;
+    z-index: 1;
 }
 
 .header-hero {
@@ -454,3 +470,146 @@ footer{
     color: var(--color-text-primary);
 }
 
+.theme-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.theme-buttons button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contato{
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    color:var(--color-text-primary);
+    font-family: Space-light;
+}
+
+.contato h1{
+    font-size: var(--font-size-title);
+}
+
+#contactForm{
+    display:flex;
+    flex-direction:column;
+    width:500px;
+    max-width:90%;
+    gap:15px;
+}
+
+#contactForm input,
+#contactForm textarea{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+#contactForm textarea{
+    resize:none;
+    height:150px;
+}
+
+#contactForm button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:var(--color-blue);
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+#contactForm button:hover{
+    opacity:.8;
+}
+
+.perguntas{
+    min-height:100vh;
+    background-color:var(--bg-secondary);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    color:var(--color-text-primary);
+    font-family:Space-light;
+}
+
+#quiz-container{
+    width:700px;
+    max-width:90%;
+    background:var(--bg-primary);
+    padding:30px;
+    border-radius:15px;
+    border:1px solid var(--color-blue);
+}
+
+#question{
+    margin-bottom:20px;
+}
+
+#answers{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.answer-btn{
+    padding:15px;
+    cursor:pointer;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+}
+
+#next-btn{
+    margin-top:20px;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:var(--color-blue);
+    color:white;
+    font-weight:bold;
+}
+
+#result{
+    text-align:center;
+}
+
+#result button{
+    margin-top: 20px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-blue);
+    color: var(--color-text-primary);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#result button:hover{
+    background-color: var(--color-blue-light);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+}
+
+#result button:active{
+    transform: scale(0.98);
+}
